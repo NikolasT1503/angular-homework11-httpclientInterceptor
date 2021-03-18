@@ -11,7 +11,8 @@ export class MyHttpServiceService {
   constructor(private httpclient: HttpClient) { }
 
   getUsers(){
-    return this.httpclient.get('https://jsonplaceholder.typicode.com/posts')
+    return this.httpclient.get('https://jsonplaceholder.typicode.com/users')
+
   }
 
   loadUsers(){

@@ -1,1 +1,24 @@
-<p>table works</p>
+<table>
+    <caption>Таблица</caption>
+    <thead>
+        <tr>
+            <th>
+                Имя
+            </th>
+            <th>
+                Почта "email"
+            </th>
+            <th>
+                Адрес
+            </th>     
+        </tr>
+    </thead>
+    <tr *ngFor="let user of myHttp.users | async; let i = index">
+        <td>{{user.name | nameConcat : user.username }}</td>
+        <td>{{user.email}}</td>
+        <td>{{user | json}}</td>
+    </tr>
+
+</table>
+
+<!-- <p>{{myHttp.users[0] | json}}</p> -->
