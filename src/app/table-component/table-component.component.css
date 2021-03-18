@@ -4,9 +4,14 @@ table {
     }
    th {
     background: #ccc; /* Цвет фона */
-    text-align: left; /* Выравнивание по левому краю */
+    text-align: center;
    }
    td, th {
     border: 1px solid rgb(9, 0, 136); /* Параметры границы */
     padding: 4px; /* Поля в ячейках */
    } 
+   
+   .filter {
+    background: rgb(251, 250, 250);
+    text-align: center; /* Выравнивание по левому краю */       
+   }

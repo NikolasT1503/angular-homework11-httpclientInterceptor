@@ -1,6 +1,6 @@
 <table>
-    <caption>Таблица</caption>
     <thead>
+        <caption>Таблица пользователей</caption>
         <tr>
             <th>
                 Имя
@@ -10,15 +10,31 @@
             </th>
             <th>
                 Адрес
+            </th>
+            <th>
+                Дополнительно
             </th>     
+        </tr>
+        <tr class="filter">
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                
+            </td>     
         </tr>
     </thead>
     <tr *ngFor="let user of myHttp.users | async; let i = index">
         <td>{{user.name | nameConcat : user.username }}</td>
         <td>{{user.email}}</td>
-        <td>{{user | json}}</td>
+        <td>{{user.addrstr}}</td>
+        <td></td>
     </tr>
 
 </table>
-
-<!-- <p>{{myHttp.users[0] | json}}</p> -->

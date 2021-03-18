@@ -8,10 +8,11 @@ import { HttpConcatAddressInterceptor } from './http-concat-address.interceptor'
 import { MyHttpServiceService } from './http-service.service';
 import { NameConcatPipe } from './name-concat.pipe';
 import { TableComponentComponent } from './table-component/table-component.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, TableComponentComponent, NameConcatPipe],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, BrowserAnimationsModule],
   providers: [
     MyHttpServiceService,
     {

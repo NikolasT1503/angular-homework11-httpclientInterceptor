@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { pipe } from 'rxjs';
 import { MyHttpServiceService } from '../http-service.service';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-table-component',
