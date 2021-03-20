@@ -1,25 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { pipe } from 'rxjs';
 import { MyHttpServiceService } from '../http-service.service';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-table-component',
   templateUrl: './table-component.component.html',
-  styleUrls: ['./table-component.component.css']
+  styleUrls: ['./table-component.component.css'],
 })
 export class TableComponentComponent implements OnInit {
-  users;
+  filterStr: string ='';
 
-  constructor(public myHttp: MyHttpServiceService) { }
+  constructor(public myHttp: MyHttpServiceService) {}
 
   ngOnInit(): void {
     this.myHttp.loadUsers();
-    //console.log('Загрузка users', this.myHttp.users);
+    console.log('Загрузка users', this.myHttp.users);
   }
 
-}
+  onKey(event){
+    this.filterStr=event.target.value;
+  }
 
+
+}
 
 /* #todo
 

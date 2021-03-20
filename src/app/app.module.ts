@@ -9,10 +9,22 @@ import { MyHttpServiceService } from './http-service.service';
 import { NameConcatPipe } from './name-concat.pipe';
 import { TableComponentComponent } from './table-component/table-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterPipePipe } from './filter-pipe.pipe';
 
 @NgModule({
-  declarations: [AppComponent, TableComponentComponent, NameConcatPipe],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    TableComponentComponent,
+    NameConcatPipe,
+    FilterPipePipe,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [
     MyHttpServiceService,
     {

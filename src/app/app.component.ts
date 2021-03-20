@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MyHttpServiceService } from './http-service.service';
 
 @Component({
@@ -9,13 +10,21 @@ import { MyHttpServiceService } from './http-service.service';
 export class AppComponent implements OnInit{
   title = 'angular-homework11-httpclientInterceptor';
   navbarOpen = false;
+  myForm : FormGroup = new FormGroup({
+    "userName": new FormControl(),
+    "userEmail": new FormControl(),
+    "userAddress": new FormControl()
+  });
 
-  constructor(public myHttp: MyHttpServiceService){
+
+
+  constructor(private fb: FormBuilder, public myHttp: MyHttpServiceService){
 
   }
 
   ngOnInit(){
     /* this.myHttp.loadUsers(); */
+
   }
 
   toggleNavbar(){
